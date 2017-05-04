@@ -1,0 +1,2 @@
+module SpottedPagesHelper
+end
