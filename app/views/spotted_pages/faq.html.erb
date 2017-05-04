@@ -1,2 +1,370 @@
-<h1>SpottedPages#faq</h1>
-<p>Find me in app/views/spotted_pages/faq.html.erb</p>
+  <!-- Navigation -->
+  <nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="container-fluid topnav">
+
+       <!-- Brand and toggle get grouped for better mobile display -->
+       <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="home">
+           <%=image_tag("spotted_logo.jpg", class: 'img-responsive', alt: "Spotted Logo")%>
+          </a>
+      </div>
+      <!-- /.navbar-header -->
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="Landing.html#Driver">Driver</a>
+          </li>
+          <li>
+            <a href="Landing.html#Advertiser">Advertiser</a>
+          </li>
+          <li>
+           <a href="Landing.html#Contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+ </nav>
+ <!-- End of Navigation Section -->
+
+ <!--Section 2-->
+ <div class="container-fluid FAQ-sec2-container">
+   <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 sec2-FAQ-div">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs FAQ-ul" role="tablist">
+      <li role="presentation" class="active"><a href="#Drivers-FAQ" aria-controls="Drivers-FAQ" role="tab" data-toggle="tab">Drivers</a></li>
+      <li role="presentation"><a href="#Adver-FAQ" aria-controls="Adver-FAQ" role="tab" data-toggle="tab">Brands & Agencies</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+      <!-- Driver Tab Section-->
+      <div role="tabpanel" class="tab-pane active" id="Drivers-FAQ">
+        <ul class="sec2-FAQ-driver-ul">
+          <li>
+            <button class="accordion btn-filter">What is Spotted&#63;</button>
+
+            <div class="panel">
+            <p>Spotted is an advertising company that pays everyday drivers to place removable advertisements on their cars.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">How do I become a driver&#63;</button>
+
+            <div class="panel">
+            <p>Applying is simple. Click on either &#34;Become a Driver Now&#34; that are located on the webpage.
+            It is a quick and simple application that allows Spotted to better understand your driving patterns.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">Do I have to pay anything to get started&#63;</button>
+
+            <div class="panel">
+            <p>No. This service is free to join and always will be.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">What are the qualifications to become a driver&#63;</button>
+
+            <div class="panel">
+              <ul class="panel-ul">
+                <li>Drive at least 25 miles &#47; day.</li>
+                <li>Clean driving record.</li>
+                <li>Own a 2010 model car or newer.</li>
+                <li>Factory finish paint job.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">Why do you need to know my phone number&#63;</button>
+
+            <div class="panel">
+            <p>We take your phone number just in case we need to call you for more information. We do not share your phone number or personal information with any advertisers.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">When can I start&#63;</button>
+
+            <div class="panel">
+            <p>Once you accepted invitation by the advertiser and have sticker attached to your car&#44; you can start advertising.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">How much money will I make&#63;</button>
+
+            <div class="panel">
+            <p>Qualified drivers earn &#36;500&#47;month for the duration of the campaign. All drivers have to do is drive as they normally would.
+            However, it would also depends on the advertisers that you are matched with as well as the size &#38; type of advert applied to your car. </p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">What are the decals made of&#63;</button>
+
+            <div class="panel">
+            <p>The decals are adhesive&#44; made of vinyl specifically used for cars. The vinyl will not damage your car &#45; it comes off very clean and actually protects your cars paint.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">What parts of the car will be wrapped&#63;</button>
+
+            <div class="panel">
+            <p>It depends upon the campaign&#44; but the majority of the time we do side wraps and the rear window.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">Who will be applying decals onto my car&#63;</button>
+
+            <div class="panel">
+            <p>Spotted will arrange for your car to get decals fitted with one of our operation team nearby.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">How long does my car stay wrapped in advertising&#63;</button>
+
+            <div class="panel">
+            <p>Our campaigns typically run anywhere between 3 &#45; 6 months.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">Can I choose what advertisement go onto my car&#63;</button>
+
+            <div class="panel">
+            <p>Absolutely. We would never want you to display an advert that you are not comfortable or happy with.
+            All our drivers have the right to refuse a particular brand or advertisement if you do not want it on your car.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">What if I decide I no longer want to advertise on my car&#63;</button>
+
+            <div class="panel">
+            <p>You must contact us and fill out form sent out by Spotted&#44; then your obligation to advertise on your car no longer be valid.
+            However, you must not quit at any stage of a running campaign until it is officially finished.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">What if I change my car&#63;</button>
+
+            <div class="panel">
+            <p>Just update your vehicle details through your profile personal profile page.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">Can I update my driver profile&#63;</button>
+
+            <div class="panel">
+            <p>You always can update your profile once you&#39;re signed in.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">How do I contact Spotted&#63;</button>
+
+            <div class="panel">
+            <p>Call us or email us at spotted&#64;gmail.com.au</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">Will my data be kept safe by Spotted&#63;</button>
+
+            <div class="panel">
+            <p>Your data is kept by Spotted only and we will not disclose any of your data. See our privacy policy.</p>
+            </div>
+          </li>
+        </ul>
+        <!-- /.sec2-FAQ-driver-ul -->
+      </div>
+      <!-- End of Driver Tab Section-->
+
+      <!-- Advertiser Tab Section-->
+      <div role="tabpanel" class="tab-pane" id="Adver-FAQ">
+        <ul class="sec2-FAQ-driver-ul">
+          <li>
+            <button class="accordion btn-filter">How much Exposure is one Spotted equals to&#63;</button>
+
+            <div class="panel">
+            <p>Each Spotted is equivalent to a baseline of 800 miles &#47; month and an average of 100&#44;000 impressions &#47; month. There is slight variability depending upon the size of the geography we are targeting.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">How do you calculate impressions&#63;</button>
+
+            <div class="panel">
+            <p>Spotted has partnered with a Traffic Engineering firm that calculates the impression count by overlaying the gps data collected daily from every car&#44; on top of traffic algorithms.
+            Important variables that our model takes into consideration include the average daily traffic count on the roads&#44; the number of lanes, the average load per vehicle, and the time of day.
+            The traffic volume is weighted in consideration with the amount of time the Spotted spent on that specific road. Impression counts are aggregated for each Spotted and collected daily.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">Who are these drivers and why did they join Spotted&#63;</button>
+
+            <div class="panel">
+            <p>Spotted drivers are safe high-mileage drivers in the community who want to make residual income for driving around with a brand on their car. It&#39;s passive side income for doing something they&#39;re already
+            doing &#45; driving. More specifically our Spotted drivers are a collection of esteemed community members. They are a collection of nurses&#44; engineers&#44; teachers, etc.&#44; who have a consistent driving pattern&#44;
+            are safe drivers, have a 2008 model car or newer&#44; and like and support the brand their driving with.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">How do you protect my brand&#39;s image&#63;</button>
+
+            <div class="panel">
+            <p>Spotted uses a strong deterrent &#45; if our Spotted drivers commit an act of reckless or aggressive driving&#44; not only do they get immediately removed from the campaign&#44; they also have to reimburse Spotted
+            &#36;500.00 for the cost of the decal we put on their car. They registered with Spotted to make residual income from their commute &#45; not to give money away. They have a strong incentive to not drive carelessly.</p>
+            <p>Additionally&#44; Spotted has created a process called EASI &#40;pronounced &#34;Easy&#34;&#41; that we use when setting up every campaign. It is an acronym that stands for educate&#44; align&#44; screen&#44; inform.</p>
+            <br>
+            <p><strong>EDUCATE</strong> &#45; We educate the surrounding community as to what the relationship is between the driver&#44; the brand on the car&#44; and Spotted. We do this by placing a small Spotted sticker on the back of every
+            car along with a &#34;How&#39;s my driving&#34; decal. It&#39;s important for viewers to know that this is a Spotted carrying a brand on their car. This way the risk of brand reputation being impacted by a Spotted driver
+            falls back on Spotted&#44; not our partnering brand.</p>
+            <p><strong>ALIGN</strong> &#45; We align the brand with drivers who are a safe demographic. That means a lot of soccer moms and dads&#44; and not a lot of 18 &#45; 24 year olds.</p>
+            <p><strong>SCREEN</strong> &#45; All drivers are background screened and driving record checked. There can be no major infractions committed on either.</p>
+            <p><strong>INFORM</strong> &#45; After Spotted conducts our interview and screening process, we speak with every one of our car drivers emphasizing the importance of safe driving and representing a brand.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">What actions are taken if a Spotted driver cuts someone off or gets a complaint&#63;</button>
+
+            <div class="panel">
+            <p>The demographic of driver we select and their driving record decreases the chance of this happening. Inevitably however&#44; drivers are human so every so often this does occur &#40;sometimes justified&#44; sometimes not&#41;.
+            The outlet for the driver to report the Spotted drivers&#39; driving behavior is through a uniquely ID&#39;d phone number on the back of their car. When a complaint is received Spotted notifies the client&#44;
+            and uses our best judgment as to whether the complaint is legitimate &#40;we check the gps data to make sure stories align and also hear from the Spotted driver themselves&#41;. If an act of reckless driving was committed&#44;
+            the car driver is immediately removed from the campaign and they have to pay Spotted &#36;300.00 for the cost of the wrap.</p>
+            </div>
+          </li>
+
+          <li>
+
+          <li>
+            <button class="accordion btn-filter">What happens if Spotted driver get into an accident&#63;</button>
+
+            <div class="panel">
+            <p>If an accident occurs our drivers promptly notify Spotted which in turn get&#39;s passed back to the client. The decal is removed from the car and a replacement driver is used for the
+            duration of the campaign. This is a rare occurrence as all of our drivers have been screened and vetted to ensure the highest degree of safe driving. </p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">Legally speaking&#44; how does this affect the driver&#39;s insurance&#63;</button>
+
+            <div class="panel">
+            <p>The legal arrangement Spotted structures with its&#39; Spotted driver is that of an independent contractor. We contract the right to put our client&#39;s brand &#40;you&#41; on the side of their car.
+            We explicitly state that the Spotted drivers are never to drive around for the sake of advertising &#45; this ensures that the Spotted driver personal auto&#45;liability coverage stays intact.
+            If an accident occurs&#44; the Spotted driver personally held auto-liability coverage is in effect because they were driving for personal reasons&#59; not for commercial reasons.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">How do you select Spotted drivers for my campaign&#63;</button>
+
+            <div class="panel">
+            <p>You add in the geography location you&#39;re looking to target and book quantity of Spotted drivers you want to include.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">Can I give my campaign Spotted drivers marketing material to hand&#45;out&#63;</button>
+
+            <div class="panel">
+            <p>We do encourage our brand partners to give us marketing material that we can give to your campaign&#39;s Spotted drivers. Spotted driverss get stopped frequently and asked about the car and the
+            featured brand&#44; so it&#39;s favorable to give curious inquirers a call&#45;to&#45;action. That said&#44; Spotted is not a guerilla marketing street force program so the Spotted drivers are not obligated
+            to go out of their way to pass out material.</p>
+            </div>
+          </li>
+
+          <li>
+            <button class="accordion btn-filter">What is your pricing model&#63;</button>
+
+            <div class="panel">
+            <p>Spotted charges monthly based upon a fixed price per car for every car in your Spotted campaign. Our cost&#45;per&#45;mile &#40;CPM&#41; falls between &#36;2.50 &#45; &#36;5.75 depending upon the population density of the
+            area we&#39;re targeting. We encourage you to reach out to us for specific pricing regarding your next campaign.</p>
+            <p>Contact info&#58;</p>
+            <p>spotted&#64;gmail.com.au</p>
+            </div>
+          </li>
+        </ul>
+        <!-- /.sec2-FAQ-driver-ul -->
+      </div>
+      <!-- End of Advertiser Tab Section-->
+
+    </div>
+    <!-- /.tab-content -->
+  </div>
+  <!-- /.sec2-FAQ-div -->
+</div>
+<!-- End of Section 2 -->
+
+<!--Section Footer-->
+<footer class="navbar-default navbar-fixed-bottom">
+  <div class="col-xs-12 col-sm-12 col-md-12  sec-footer-div">
+
+    <ul class="list-inline text-center">
+      <li class="footer-li">
+        <a href="Landing.html#Driver">Driver</a>
+      </li>
+      <li class="footer-li">
+        <a href="Landing.html#Advertiser">Advertiser</a>
+      </li>
+      <li class="footer-li">
+       <a href="Landing.html#Contact">Contact Us</a>
+      </li>
+      <li>
+        <a class="back-to-top glyphicon glyphicon-arrow-up" href="#top-sec"></a>
+      </li>
+    </ul>
+  </div>
+  <!--  sec-footer-div -->
+</footer>
+<!-- End of Footer Section -->
+
+</body>
+
+<script>
+<!--Section 2 -->
+/*Allow content of teach ab to extend when 'plus' button is clicked */
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+acc[i].onclick = function() {
+  this.classList.toggle("active");
+  var panel = this.nextElementSibling;
+  if (panel.style.maxHeight){
+    panel.style.maxHeight = null;
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + 'px';
+  }
+}
+}
+</script>
+
+</html>

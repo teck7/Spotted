@@ -13,3 +13,5 @@ module Spotted
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+# config.assets.paths << Rails.root.join("app/bootstrap-3.3.7-dist")

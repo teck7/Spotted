@@ -1,2 +1,328 @@
-<h1>SpottedPages#home</h1>
-<p>Find me in app/views/spotted_pages/home.html.erb</p>
+	<!-- Navigation -->
+  <nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+			<div class="container-fluid topnav">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="home">
+            <%=image_tag("spotted_logo.jpg", class: 'img-responsive', alt: "Spotted Logo")%>
+					</a>
+				</div>
+        <!-- /.navbar-header -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#html">Sign In</a>
+						</li>
+						<li>
+							<a href="#Driver">Driver</a>
+						</li>
+						<li>
+							<a href="#Advertiser">Advertiser</a>
+						</li>
+						<li>
+							<a href="faq">FAQ</a>
+						</li>
+						<li>
+							<a href="#Contact">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+        <!-- /.navbar-collapse -->
+
+			</div>
+		  <!-- /.topnav -->
+    </div>
+    <!-- /.container -->
+	</nav>
+	<!-- End of Navigation Section -->
+
+	<!-- Section 1 -->
+	<div id="top-sec" class="container-fluid sec-1">
+    <div class="row">
+        <div class="text-center">
+
+          <%=image_tag("stick_earn_drive.jpg", class: 'img-responsive', alt: "spotted_landing_image")%>
+
+          <!--Caption 1 -->
+          <div class="caption sec-1-caption">
+            <h1>Stick. Earn. Drive</h1>
+					     <p class="sec-1-p">
+						   <a href="#html" class="btn btn-lg sec1-link1" role="button" aria-pressed="true">Become a Driver</a>
+						   &nbsp;&nbsp;&nbsp;
+						   or
+						   &nbsp;&nbsp;&nbsp;
+						   <a href="#html" class="btn btn-lg sec1-link2" role="button" aria-pressed="true">Advertise with Us</a>
+					     </p>
+         </div>
+
+         <!--Caption 2 -->
+				 <div class="caption2 sec-2-caption">
+					 <h1>Already a Member&#63;</h1>
+					   <p class="sec-2-p">
+						 <a href="#html" class="btn btn-lg sec1-link3" role="button" aria-pressed="true">Sign In</a>
+					   </p>
+         </div>
+
+      </div>
+			<!-- /.text-center -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- End of Section 1 -->
+
+	<!-- Section 2 -->
+	<div id="Driver" class="container-fluid sec-2">
+    <div class="row text-center">
+
+			<h1 class="sec-2-h">How it Works for Drivers&#63;</h1>
+
+      <!-- 1st column -->
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 sec-2-content-div">
+        <%=image_tag("sign_in.jpg", class: 'img-responsive', alt: "sign_in_illustration")%>
+				<h2 class="sec-2-h2">Step 1</h2>
+				<h3 class="sec-2-h3">Sign Up As a Driver</h3>
+				<p class="sec-2-p">Sign up via web or downloading our app</p>
+
+			  <div class="col-xs-12 col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+				  <li role="separator" class="divider sec2-divider"></li>
+			  </div>
+      </div>
+
+      <!-- 2nd column -->
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 sec-2-content-div">
+        <%=image_tag("accept_reject.jpg", class: 'img-responsive', alt: "accept_reject_illustration")%>
+				<h2 class="sec-2-h2">Step 2</h2>
+				<h3 class="sec-2-h3">Apply &#38; Qualify For a Campaign</h3>
+				<p class="sec-2-p">Checkout the campaigns available for you</p>
+
+				<div class="col-xs-12 col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+					<li role="separator" class="divider sec2-divider"></li>
+				</div>
+      </div>
+
+      <!-- 3rd column -->
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 sec-2-content-div">
+        <%=image_tag("start_drive_earn.jpg", class: 'img-responsive', alt: "start_drive_earn_illustration")%>
+				<h2 class="sec-2-h2">Step 3</h2>
+				<h3 class="sec-2-h3">Start Advertising &#38; Earning&#33;</h3>
+				<p class="sec-2-p">Get your sticker installed at one of our certified installation centres and do what you&#39;re already doing. Drive&#33;</p>
+      </div>
+
+    </div>
+		<!-- /.text-center -->
+	</div>
+	<!-- End of Section 2 -->
+
+	<!-- Section 3 -->
+	<div id="Advertiser" class="container-fluid sec-3">
+		<div class="row">
+
+			<h1 class="sec-3-h text-center">Why Advertise with us&#63;</h1>
+
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sec-3-outer-div">
+
+				<!-- First Icon Image -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+          <%=image_tag("track_ads.jpg", class: 'img-responsive', alt: "track_ad_icon")%>
+				</div>
+
+				<!-- First Icon Image Content -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 sec7-content1">
+					<h1 class="sec3-content-h">Track Your Ads</h1>
+					<p class="sec3-content-p">Know where your mobile billboards are being advertised.</p>
+				</div>
+
+				<div class="col-xs-12 col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 sec3-divider-div">
+					<li role="separator" class="divider sec3-divider"></li>
+				</div>
+
+				<!-- Second Icon Image -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+          <%=image_tag("location_ads.jpg", class: 'img-responsive', alt: "spotted_location_icon")%>
+				</div>
+
+				<!-- Second Icon Image Content -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+					<h1 class="sec3-content-h">Choose Your Location</h1>
+					<p class="sec3-content-p">Whether it&#39;s in the city, or the whole country&#44; you select drivers that suit your needs.</p>
+				</div>
+
+				<div class="col-xs-12 col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 sec3-divider-div">
+					<li role="separator" class="divider sec3-divider"></li>
+				</div>
+
+      <!-- /.sec-3-outer-div -->
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sec-3-outer-div">
+
+				<!-- Third Icon Image -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+          <%=image_tag("capture_ads.jpg", class: 'img-responsive', alt: "capture_ads_icon")%>
+				</div>
+
+				<!-- Third Icon Image Content -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 sec7-content3">
+					<h1 class="sec3-content-h">Monitor Your Campaign with Analytics and Real Time Data</h1>
+					<p class="sec3-content-p">Our platform provides you with data throughout your entire campaign&#44; allowing you
+					the ease of measuring campaign results&#44; while you focus on growing your business.
+					</p>
+				</div>
+
+				<div class="col-xs-12 col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 sec3-divider-div">
+					<li role="separator" class="divider sec3-divider"></li>
+				</div>
+
+				<!-- Fourth Icon Image -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+          <%=image_tag("thumbs_up.jpg", class: 'img-responsive', alt: "thumbs_up_icon")%>
+				</div>
+
+				<!-- Fourth Icon Image Content -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 sec7-content4">
+					<h1 class="sec3-content-h">Impress Like Never Before</h1>
+					<ul>
+						<li class="sec3-content-li">
+						Scale your reach as your business grows&#33; Each Spotted driver generates an average of
+						between 100&#44;000 to 200&#44;000 impressions per month.
+						</li>
+						<li class="sec3-content-li">
+						And we are affordable&#33; Spotted offers industry low CPMs.
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<!-- /.sec-3-outer-div -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- End of Section 3 -->
+
+	<!-- Section 4 -->
+	<div id="Driver" class="container-fluid sec-4">
+    <div class="row text-center">
+
+			<h1 class="sec-4-h">How it Works for advertiser&#63;</h1>
+
+      <!-- 1st column -->
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 sec-4-content-div">
+        <%=image_tag("set_ad.jpg", class: 'img-responsive', alt: "setup_advertisement_illustration")%>
+				<h2 class="sec-4-h2">Step 1</h2>
+				<h3 class="sec-4-h3">Sign Up &#38; Start Listing Advertisement</h3>
+				<p class="sec-4-p">Sign up via web and start create your campaign</p>
+
+				<div class="col-xs-12 col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+					<li role="separator" class="divider sec4-divider"></li>
+				</div>
+
+      </div>
+
+      <!-- 2nd column -->
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 sec-4-content-div">
+        <%=image_tag("book_car.jpg", class: 'img-responsive', alt: "book_car_illustration")%>
+				<h2 class="sec-4-h2">Step 2</h2>
+				<h3 class="sec-4-h3">Search &#38; Book Your Vehicle</h3>
+				<p class="sec-4-p">Checke out which vehicle best suited your advertising needs</p>
+
+				<div class="col-xs-12 col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+					<li role="separator" class="divider sec2-divider"></li>
+				</div>
+
+      </div>
+
+      <!-- 3rd column -->
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 sec-4-content-div">
+        <%=image_tag("payment.jpg", class: 'img-responsive', alt: "make_payment_illustration")%>
+				<h2 class="sec-4-h2">Step 3</h2>
+				<h3 class="sec-4-h3">Complete Payment &#38; Start Advertising</h3>
+				<p class="sec-4-p">Your advertisement will hit the road once the sticker is installed by certified technician</p>
+      </div>
+
+    </div>
+		<!-- /.text-center -->
+	</div>
+	<!-- End of Section 4 -->
+
+	<!-- Section 5 -->
+	<div id="Contact" class="container-fluid sec-5">
+		<div class="row text-center">
+
+			<h1 class="sec-5-h">Get Started with Spotted Now</h1>
+
+			<p class="sec-5-link">
+				<a href="#html" class="btn btn-lg sec-5-link-1" role="button" aria-pressed="true">Get Started</a>
+			</p>
+
+			<h2 class="sec-5-h2">Let&#39;s be in touch&#33;</h2>
+
+			<div class="col-xs-12 col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-4">
+				<p class="sec-5-content">Whether you&#39;ve got a question&#44; a problem or even a good joke&#44; drop us a line.
+				We will do our best to reply as soon as possible.
+				</p>
+			</div>
+
+			<div class="col-xs-12 col-sm-9 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-4">
+				<h4 class="sec-5-h4">Give us a call at hotline number</h4>
+				<p class="contact-no">+ 61 334 234 123</p>
+				<p class="sec-5-p1">or email us at</p>
+				<p class="sec-5-p2">spotted&#64;gmail.com.au</p>
+			</div>
+
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- End of Section 5 -->
+
+	<!--Section Footer-->
+	<footer class="footer">
+		<div class="col-xs-12 col-sm-12 col-md-12  sec-footer-div">
+
+			<ul class="list-inline text-center">
+        <li class="footer-li">
+          <a href="#Driver">Driver</a>
+        </li>
+        <li class="footer-li">
+					<a href="#Advertiser">Advertiser</a>
+        </li>
+				<li class="footer-li">
+          <a href="faq">FAQ</a>
+        </li>
+				<li>
+					<a class="back-to-top glyphicon glyphicon-arrow-up" href="#top-sec"></a>
+        </li>
+      </ul>
+
+		</div>
+    <!-- /.sec-footer-div -->
+	</footer>
+
+
+<script>
+<!-- Script for Individual Section Smooth Scrolling -->
+$('a[href*="#"]:not([href="#"])').click(function() {
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});
+<!-- End of Script for Individual Section Scroll -->
+</script>
+
+</html>
