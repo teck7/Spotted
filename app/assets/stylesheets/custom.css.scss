@@ -4,20 +4,38 @@ html {
     height: 100%;
 }
 
+/* Application.css file */
+.app-container {
+  margin-left: -15px;
+  margin-right: -15px;
+  z-index: 10000;
+}
+
+.app-container-1,
+.app-container-2 {
+  padding-top: 70px;
+  z-index: 10000;
+}
+
+button.close1 {
+  margin-top: -10px;
+  font-size: 30px;
+  color: black;
+}
 /*
   ===============================================
   Navigation Section Settings (Same for all Page)
   ===============================================
 */
 .topnav {
-	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;	
+	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
 	border: none;
 	background-color: black;
 	margin-top: 0;
 	margin-bottom: 0;
 	margin-left: -15px;
 	margin-right: -15px;
-	
+
 }
 
 .navbar-brand {
@@ -32,21 +50,21 @@ html {
 }
 
 .nav > li > a {
-    color: white;								
+    color: white;
 	font-weight: 500;
 	font-size: 16px;
 	padding-right: 14px;
 }
 
 .nav > .active > a {
-	color: none;								
-    border-bottom: none;			
+	color: none;
+    border-bottom: none;
 }
 
 .nav > li > a:hover {
-	color: none;								
-	background-color: transparent;		
-	border-bottom: none;			
+	color: none;
+	background-color: transparent;
+	border-bottom: none;
 	background: rgba(153, 204, 255, 0.1);
 }
 
@@ -65,7 +83,7 @@ html {
 }
 
 .navbar-toggle:hover {
-	background-color: rgba(153, 204, 255, 0.1);				
+	background-color: rgba(153, 204, 255, 0.1);
 }
 
 .navbar-toggle:focus{
@@ -73,14 +91,14 @@ html {
 }
 
 .navbar-toggle .icon-bar {
-    background-color: white;								
+    background-color: white;
 	width: 22px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
 
 @media (max-width: 767px){
-    	
+
 	.navbar-brand > img {
 		height: 100%;
 		padding-top: 0px;
@@ -119,12 +137,12 @@ nav {
 	.navbar-toggle {
 		margin-top: 10px;
 		margin-bottom: 12px;
-		border: none;								
+		border: none;
 		padding-left: 8px;
 	}
 
 	.navbar-toggle .icon-bar {
-		background-color: white;								
+		background-color: white;
 		width: 22px;
 	}
 }
@@ -133,7 +151,7 @@ nav {
 /*-------------------------------------------------------------------------------------------Landing Page-----------------------------------------------------------*/
 /*
   ===============================================
-  Section 1 Settings 
+  Section 1 Settings
   ===============================================
 */
 .sec-1 {
@@ -176,7 +194,7 @@ nav {
 .sec1-link2,
 .sec1-link3 {
 	color: white;
-	background-color: #00558D;								/*custom blue*/ 
+	background-color: #00558D;								/*custom blue*/
 	font-size: 20px;
 	position: relative;
     text-decoration: none;
@@ -186,7 +204,7 @@ nav {
 .sec1-link2:hover,
 .sec1-link3:hover {
 	color: white;
-	background-color: #002B47;								/*custom blue*/ 
+	background-color: #002B47;								/*custom blue*/
 }
 
 .sec1-link1:before,
@@ -237,7 +255,7 @@ nav {
 	.caption {
     bottom: 82%;
 	}
-	
+
 	.caption2 {
     bottom: 72%;
 	}
@@ -247,7 +265,7 @@ nav {
 	.caption {
     bottom: 55%;
 	}
-	
+
 	.caption2 {
     bottom: 30%;
 	}
@@ -257,7 +275,7 @@ nav {
 	.caption {
     bottom: 80%;
 	}
-	
+
 	.caption2 {
     bottom: 65%;
 	}
@@ -267,7 +285,7 @@ nav {
 	.caption {
     bottom: 60%;
 	}
-	
+
 	.caption2 {
     bottom: 50%;
 	}
@@ -276,7 +294,7 @@ nav {
 	.sec-2-caption > h1	{
 	font-size: 40px;
 	}
-	
+
 	.sec-1-p,
 	.sec-2-p	{
 	font-size: 35px;
@@ -287,21 +305,21 @@ nav {
 	.caption {
     bottom: 65%;
 	}
-	
+
 	.caption2 {
     bottom: 55%;
 	}
-	
+
 	.sec-1-caption > h1,
 	.sec-2-caption > h1	{
 	font-size: 20px;
 	}
-	
+
 	.sec-1-p,
 	.sec-2-p	{
 	font-size: 20px;
 	}
-	
+
 	.sec1-link1,
 	.sec1-link2,
 	.sec1-link3	{
@@ -313,16 +331,16 @@ nav {
 	.caption {
     bottom: 78%;
 	}
-	
+
 	.caption2 {
     bottom: 63%;
 	}
-	
+
 	.sec1-link1:before,
 	.sec1-link2:before	{
 	width: 78%;
 	}
-	
+
 	.sec1-link3:before	{
 	width: 68%;
 	}
@@ -332,21 +350,21 @@ nav {
 	.caption {
     bottom: 62%;
 	}
-	
+
 	.caption2 {
     bottom: 52%;
 	}
-	
+
 	.sec-1-caption > h1,
 	.sec-2-caption > h1	{
 	font-size: 18px;
 	}
-	
+
 	.sec-1-p,
 	.sec-2-p	{
 	font-size: 15px;
 	}
-	
+
 	.sec1-link1,
 	.sec1-link2,
 	.sec1-link3	{
@@ -358,16 +376,16 @@ nav {
 	.caption {
     bottom: 74%;
 	}
-	
+
 	.caption2 {
     bottom: 61%;
 	}
-	
+
 	.sec1-link1:before,
 	.sec1-link2:before 	{
 	width: 72%;
 	}
-	
+
 	.sec1-link3:before	{
 	width: 65%;
 	}
@@ -377,16 +395,16 @@ nav {
 	.caption {
     bottom: 78%;
 	}
-	
+
 	.caption2 {
     bottom: 65%;
 	}
-	
+
 	.sec1-link1:before,
 	.sec1-link2:before	{
 	width: 72%;
 	}
-	
+
 	.sec1-link3:before	{
 	width: 62%;
 	}
@@ -396,7 +414,7 @@ nav {
 	.caption {
     bottom: 76%;
 	}
-	
+
 	.caption2 {
     bottom: 63%;
 	}
@@ -406,21 +424,21 @@ nav {
 	.caption {
     bottom: 72%;
 	}
-	
+
 	.caption2 {
     bottom: 58%;
 	}
-	
+
 	.sec-1-caption > h1,
 	.sec-2-caption > h1	{
 	font-size: 13px;
 	}
-	
+
 	.sec1-link1:before,
 	.sec1-link2:before {
 	width: 75%;
 	}
-	
+
 	.sec1-link3:before	{
 	width: 62%;
 	}
@@ -430,32 +448,32 @@ nav {
 	.caption {
     bottom: 50%;
 	}
-	
+
 	.caption2 {
     bottom: 25%;
 	}
-	
+
 	.sec-1-caption > h1,
 	.sec-2-caption > h1	{
 	font-size: 15px;
 	}
-	
+
 	.sec-1-p,
 	.sec-2-p	{
 	font-size: 13px;
 	}
-	
+
 	.sec1-link1,
 	.sec1-link2,
 	.sec1-link3	{
 	font-size: 10px;
 	}
-	
+
 	.sec1-link1:before,
 	.sec1-link2:before	{
 	width: 75%;
 	}
-	
+
 	.sec1-link3:before	{
 	width: 58%;
 	}
@@ -463,7 +481,7 @@ nav {
 
 /*
   ===============================================
-  Section 2 Settings 
+  Section 2 Settings
   ===============================================
 */
 .sec-2 {
@@ -489,7 +507,7 @@ nav {
 	color: black;
 	font-weight: 400;
 }
-	
+
 .sec-2-p {
 	font-size: 23px;
 	color: black;
@@ -501,7 +519,7 @@ nav {
 
 .sec2-divider {
 	display: inline-block;
-	border-bottom: 1px solid #DBDADA;						
+	border-bottom: 1px solid #DBDADA;
 	width: 100%;
 	margin-top: 50px;
 	display: none;
@@ -524,16 +542,16 @@ nav {
 	.sec-2-h3 {
 	font-size: 25px;
 	}
-	
+
 	.sec-2-p {
 	font-size: 20px;
 	color: black;
 	}
-	
+
 	.sec-2-content-div {
 	margin-bottom: 50px;
 	}
-	
+
 	.sec2-divider {
 	display: inherit;
 	}
@@ -543,7 +561,7 @@ nav {
 	.sec-2-h {
 	font-size: 30px;
 	}
-	
+
 	.sec-2-h2 {
 	font-size: 27px;
 	}
@@ -603,7 +621,7 @@ nav {
 
 .sec3-divider {
 	display: inline-block;
-	border-bottom: 1px solid #DBDADA;						
+	border-bottom: 1px solid #DBDADA;
 	width: 100%;
 	margin-top: 20px;
 	display: none;
@@ -619,11 +637,11 @@ nav {
 	.sec-3-img4 {
 	margin-top: 50px;
 	}
-	
+
 	.sec-3-img3 {
 	margin-top: -25px;
 	}
-	
+
 	.sec3-content-h {
 	text-align: center;
 	}
@@ -631,7 +649,7 @@ nav {
 	.sec3-content-p {
 	text-align: center;
 	}
-	
+
 	.sec3-divider-div,
 	.sec3-divider {
 	display: inherit;
@@ -642,11 +660,11 @@ nav {
 	.sec-3-h {
 	font-size: 40px;
 	}
-	
+
 	.sec3-content-h {
 	font-size: 23px;
 	}
-	
+
 	.sec3-content-p {
 	font-size: 22px;
 	}
@@ -658,7 +676,7 @@ nav {
 
 /*
   ===============================================
-  Section 4 Settings 
+  Section 4 Settings
   ===============================================
 */
 .sec-4 {
@@ -684,7 +702,7 @@ nav {
 	color: black;
 	font-weight: 400;
 }
-	
+
 .sec-4-p {
 	font-size: 23px;
 	color: black;
@@ -696,7 +714,7 @@ nav {
 
 .sec4-divider {
 	display: inline-block;
-	border-bottom: 1px solid #DBDADA;						
+	border-bottom: 1px solid #DBDADA;
 	width: 100%;
 	margin-top: 50px;
 	display: none;
@@ -719,16 +737,16 @@ nav {
 	.sec-4-h3 {
 	font-size: 25px;
 	}
-	
+
 	.sec-4-p {
 	font-size: 20px;
 	color: black;
 	}
-	
+
 	.sec-4-content-div {
 	margin-bottom: 50px;
 	}
-	
+
 	.sec4-divider {
 	display: inherit;
 	}
@@ -738,7 +756,7 @@ nav {
 	.sec-4-h {
 	font-size: 30px;
 	}
-	
+
 	.sec-4-h2 {
 	font-size: 27px;
 	}
@@ -773,7 +791,7 @@ p.sec-5-link {
 
 .sec-5-link-1 {
 	color: white;
-	background-color: #00558D;								/*custom blue*/ 
+	background-color: #00558D;								/*custom blue*/
 	font-size: 25px;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -785,7 +803,7 @@ p.sec-5-link {
 
 .sec-5-link-1:hover {
 	color: white;
-	background-color: #002B47;								/*custom blue*/ 
+	background-color: #002B47;								/*custom blue*/
 }
 
 .sec-5-link-1:before  {
@@ -879,7 +897,7 @@ p.sec-5-link {
 	.sec-5-h {
 	font-size: 30px;
 	}
-	
+
 	.sec-5-h2 {
 	font-size: 30px;
 	}
@@ -907,7 +925,7 @@ p.sec-5-link {
 
 /*
   ===============================================
-  Footer Section Settings 
+  Footer Section Settings
   ===============================================
 */
 .sec-footer-div {
@@ -922,7 +940,7 @@ p.sec-5-link {
 .footer-li > a {
 	color: white;
 	padding-right: 5px;
-	font-size: 15px; 
+	font-size: 15px;
 }
 
 .back-to-top {
@@ -938,7 +956,7 @@ p.sec-5-link {
 /*-------------------------------------------------------------------------------------------FAQ Page-----------------------------------------------------------*/
 /*
   ===============================================
-  Section 2 Settings 
+  Section 2 Settings
   ===============================================
 */
 .FAQ-sec2-container {
@@ -972,7 +990,7 @@ p.sec-5-link {
 }
 
 .FAQ-ul > li > a {
-	background-color: white; 
+	background-color: white;
 	border-color: white;
 	color:black;
 	font-weight: 600;
@@ -1024,7 +1042,7 @@ p.sec-5-link {
 	margin-left:0;
 	margin-right: 0;
 	margin-bottom: 0;
-}	
+}
 
 div.panel {
 	margin-top: -5px;
@@ -1033,10 +1051,10 @@ div.panel {
 	padding-left: 18px;
     padding-right: 18px;
     background-color: white;
-	border-left: 1px solid white;								
-	border-right: 1px solid white;	
-	border-top: 1px solid white;							
-	border-bottom: 1px solid white;		
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
 	-webkit-border-top-left-radius: 0px;
 	-webkit-border-top-right-radius: 0px;
 	-webkit-border-bottom-left-radius: 0px;
@@ -1077,8 +1095,8 @@ ul.panel-ul > li {
 }
 
 button.accordion {
-    background-color: white;											
-    color: black;											
+    background-color: white;
+    color: black;
     cursor: pointer;
 	margin-top: -20px;
 	padding-top: 13px;
@@ -1097,7 +1115,7 @@ button.accordion {
     transition: 0.4s;
 }
 
-button.accordion.active, 
+button.accordion.active,
 button.accordion:hover {
     background-color: rgba(0, 85, 141, 0.1);				/*custom blue*/
 	border: 1px solid rgba(0, 85, 141, 0);				/*custom blue*/
@@ -1124,17 +1142,16 @@ button.accordion.active:after {
 	.FAQ-ul > li > a {
 	font-size: 15px;
 	}
-	
+
 	button.accordion {
     font-size: 15px;
 	}
-	
+
 	div.panel {
 	margin-top: -8.5px;
 	}
-	
+
 	div.panel > p {
 	font-size: 13px;
 	}
 }
-

@@ -15,7 +15,25 @@
   </head>
 
   <body>
+
+  <div class="container-fluid app-container">
+    <% if notice %>
+      <div class="alert alert-info app-container-1"><%= notice %>
+        <button type="button" class="close close1" data-dismiss="alert">×</button>
+      </div>
+    <% end %>
+
+    <% if alert %>
+      <div class="alert alert-warning .app-container-2"><%= alert %>
+        <button type="button" class="close close1" data-dismiss="alert">×</button>
+      </div>
+    <% end %>
+
     <%= yield %>
+
+  </div>
+
+
   </body>
 
 </html>

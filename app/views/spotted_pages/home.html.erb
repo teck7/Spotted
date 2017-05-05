@@ -18,9 +18,12 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="#html">Sign In</a>
-						</li>
+            <% if user_signed_in? %>
+              <li><%= link_to current_user.email, edit_user_registration_path %></li>
+						  <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+            <% end %>
 						<li>
 							<a href="#Driver">Driver</a>
 						</li>
@@ -55,19 +58,27 @@
           <div class="caption sec-1-caption">
             <h1>Stick. Earn. Drive</h1>
 					     <p class="sec-1-p">
-						   <a href="#html" class="btn btn-lg sec1-link1" role="button" aria-pressed="true">Become a Driver</a>
+               <%= link_to "Become a Driver", new_user_registration_path, class: 'btn btn-lg sec1-link1' %>
 						   &nbsp;&nbsp;&nbsp;
 						   or
 						   &nbsp;&nbsp;&nbsp;
-						   <a href="#html" class="btn btn-lg sec1-link2" role="button" aria-pressed="true">Advertise with Us</a>
+               <%= link_to "Advertise with Us", new_user_registration_path, class: 'btn btn-lg sec1-link2' %>
 					     </p>
          </div>
 
          <!--Caption 2 -->
 				 <div class="caption2 sec-2-caption">
-					 <h1>Already a Member&#63;</h1>
+           <% if user_signed_in? %>
+             <h1>Welcome, Member&#33;</h1>
+           <% else %>
+            <h1>Already a Member&#63;</h1>
+           <% end %>
 					   <p class="sec-2-p">
-						 <a href="#html" class="btn btn-lg sec1-link3" role="button" aria-pressed="true">Sign In</a>
+               <% if user_signed_in? %>
+   						  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-lg sec1-link3' %>
+               <% else %>
+                 <%= link_to "Sign In", new_user_session_path, class: 'btn btn-lg sec1-link3' %>
+               <% end %>
 					   </p>
          </div>
 
@@ -259,7 +270,7 @@
 			<h1 class="sec-5-h">Get Started with Spotted Now</h1>
 
 			<p class="sec-5-link">
-				<a href="#html" class="btn btn-lg sec-5-link-1" role="button" aria-pressed="true">Get Started</a>
+				<a href="#top-sec" class="btn btn-lg sec-5-link-1" role="button" aria-pressed="true">Get Started</a>
 			</p>
 
 			<h2 class="sec-5-h2">Let&#39;s be in touch&#33;</h2>
