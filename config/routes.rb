@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :profiles
   # Devise routes for User Model
   devise_for :users
 

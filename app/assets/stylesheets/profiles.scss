@@ -1,0 +1,38 @@
+// Place all the styles related to the Profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile-link {
+	color: white;
+	background-color: #00558D;								/*custom blue*/
+	font-size: 20px;
+	position: relative;
+  text-decoration: none;
+}
+
+.profile-link:hover {
+	color: white;
+	background-color: #002B47;								/*custom blue*/
+}
+
+.profile-link:before {
+	content: "";
+	position: absolute;
+	width: 85%;
+	height: 2px;
+	bottom: 8px;
+	left: 14px;
+	background-color: white;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+
+.profile-link:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}

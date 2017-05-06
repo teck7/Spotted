@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <hr>
+
+      <h1>Your Personal Profile</h1>
+
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <strong>User:</strong>
+        <%= @profile.user.email %>
+      </p>
+
+      <p>
+        <strong>Avatar:</strong>
+        <%= @profile.avatar %>
+      </p>
+
+      <p>
+        <strong>First Name:</strong>
+        <%= @profile.first_name %>
+      </p>
+
+      <p>
+        <strong>Last Name:</strong>
+        <%= @profile.last_name %>
+      </p>
+
+      <p>
+        <strong>Mobile No:</strong>
+        <%= @profile.mob_number %>
+      </p>
+
+      <p>
+        <strong>Address:</strong>
+        <%= @profile.address %>
+      </p>
+
+    <hr>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+
+  <%= link_to 'Edit', edit_profile_path(@profile), class: 'btn edit-profile-link' %> |
+  <%= link_to 'Back', profiles_path, class: 'btn all-profile-link' %>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
+
+  </div>
+</div>
