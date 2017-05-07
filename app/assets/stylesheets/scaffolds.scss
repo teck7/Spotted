@@ -100,8 +100,10 @@ label {
 	background-color: #002B47;
 }
 
+.home-link,
 .id-profile-link,
 .edit-profile-link,
+.edit-registration-link,
 .all-profile-link,
 .new-profile-link,
 .destroy-profile-link,
@@ -112,8 +114,10 @@ label {
   text-decoration: none;
 }
 
+.home-link:hover,
 .id-profile-link:hover,
 .edit-profile-link:hover,
+.edit-registration-link:hover,
 .all-profile-link:hover,
 .new-profile-link:hover,
 .destroy-profile-link:hover,
