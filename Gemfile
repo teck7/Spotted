@@ -41,6 +41,15 @@ gem 'devise'
 # Bootstrap for Devise
 gem 'devise-bootstrapped'
 
+# CarrierWave for Profile Avatar
+gem 'carrierwave', '~> 1.0'
+
+# RMagick
+gem 'rmagick'
+
+# Mini MiniMagick
+gem 'mini_magick', '~> 4.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

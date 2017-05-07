@@ -22,7 +22,7 @@
         <% @profiles.each do |profile| %>
           <tr>
             <td><%= profile.user.email %></td>
-            <td><%= profile.avatar %></td>
+            <td><%= image_tag profile.avatar.thumb.url if profile.avatar? %></td>
             <td><%= profile.first_name %></td>
             <td><%= profile.last_name %></td>
             <td><%= profile.mob_number %></td>
