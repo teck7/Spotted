@@ -62,7 +62,7 @@
   <tbody>
     <% @vehicles.each do |vehicle| %>
       <tr>
-        <td><%= vehicle.user.profile.first_name  %></td>
+        <td><%= current_user.profile.first_name %></td>
         <td><%= vehicle.car_make %></td>
         <td><%= vehicle.car_model %></td>
         <td><%= vehicle.car_built %></td>
