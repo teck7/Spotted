@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  car_make: MyString
+  car_model: MyString
+  car_built: 2017-05-08
+  car_color: MyString
+  car_rego: MyString
+
+two:
+  user: two
+  car_make: MyString
+  car_model: MyString
+  car_built: 2017-05-08
+  car_color: MyString
+  car_rego: MyString

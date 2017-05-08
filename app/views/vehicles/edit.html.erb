@@ -42,19 +42,21 @@
 <div class="row top-row">
   <div class="col-sm-4 col-sm-offset-4">
 
-    <h1>Edit Your Profile</h1>
+    <h1>Edit Your Vehicle Details</h1>
 
   </div>
 </div>
 
-    <%= render 'form', profile: @profile %>
+<%= render 'form', vehicle: @vehicle %>
+
+<%= link_to 'Show', @vehicle %> |
+<%= link_to 'Back', vehicles_path %>
 
 <div class="row">
   <div class="col-sm-4 col-sm-offset-4">
 
-    <%= link_to 'Show', @profile, class: 'btn id-profile-link' %>
-    <%= link_to 'All Profiles', profiles_path, class: 'btn all-profile-link' %>
-    <%= link_to "Edit Registration", edit_user_registration_path, class: 'btn edit-registration-link' %>
+    <%= link_to 'Show', @vehicle, class: 'btn id-vehicle-link' %>
+    <%= link_to 'All Vehicles', vehicles_path, class: 'btn all-vehicle-link' %>
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
 
   </div>

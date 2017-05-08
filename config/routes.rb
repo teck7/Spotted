@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :vehicles
   # Devise routes for User Model
   devise_for :users
 

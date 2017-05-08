@@ -40,21 +40,49 @@
 <!-- End of Navigation Section -->
 
 <div class="row top-row">
-  <div class="col-sm-4 col-sm-offset-4">
+  <div class="text-center col-sm-4 col-sm-offset-4">
 
-    <h1>Edit Your Profile</h1>
+    <p id="notice"><%= notice %></p>
 
+    <p>
+      <strong>Owner:</strong>
+      <%= @vehicle.user.profile.first_name %>
+    </p>
+
+    <p>
+      <strong>Car Make:</strong>
+      <%= @vehicle.car_make %>
+    </p>
+
+    <p>
+      <strong>Car Model:</strong>
+      <%= @vehicle.car_model %>
+    </p>
+
+    <p>
+      <strong>Car Built:</strong>
+      <%= @vehicle.car_built %>
+    </p>
+
+    <p>
+      <strong>Car Color:</strong>
+      <%= @vehicle.car_color %>
+    </p>
+
+    <p>
+      <strong>Car Registration No:</strong>
+      <%= @vehicle.car_rego %>
+    </p>
+
+    <hr>
   </div>
 </div>
 
-    <%= render 'form', profile: @profile %>
-
 <div class="row">
-  <div class="col-sm-4 col-sm-offset-4">
+  <div class="text-center col-sm-4 col-sm-offset-4">
 
-    <%= link_to 'Show', @profile, class: 'btn id-profile-link' %>
-    <%= link_to 'All Profiles', profiles_path, class: 'btn all-profile-link' %>
-    <%= link_to "Edit Registration", edit_user_registration_path, class: 'btn edit-registration-link' %>
+    <%= link_to 'Edit Vehicle', edit_vehicle_path(@vehicle), class: 'btn edit-profile-link' %>
+    <%= link_to 'All Vehicles', vehicles_path, class: 'btn all-vehicle-link' %>
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
 
   </div>

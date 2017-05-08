@@ -84,9 +84,34 @@
   <div class="text-center col-sm-4 col-sm-offset-4">
 
   <%= link_to 'Edit Profile', edit_profile_path(@profile), class: 'btn edit-profile-link' %>
-  <%= link_to 'Back', profiles_path, class: 'btn all-profile-link' %>
+  <%= link_to 'All Profiles', profiles_path, class: 'btn all-profile-link' %>
   <%= link_to "Edit Registration", edit_user_registration_path, class: 'btn edit-registration-link' %>
   <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
 
   </div>
 </div>
+
+<!-- For tracing <%= "@vehicle.nil? = #{@vehicle.nil?}, current_user.vehicle.nil?=#{current_user.vehicle.nil?}" %> -->
+<!-- @vehicle.nil? is equivalent to current_user.vehicle.nil? -->
+<% if user_signed_in? && @profile.save && current_user.vehicle.nil? %>
+  <div class="row">
+    <div class="text-center col-sm-4 col-sm-offset-4">
+      <div class="col-sm-5">
+        <h3>Start Driving</h3>
+        <%= link_to "Build Vehicle Details", new_vehicle_path, class: 'btn build-vehicle-link' %>
+      </div>
+      <div class="col-sm-1">
+        <h3>|</h3>
+      </div>
+      <div class="col-sm-5">
+        <h3>Start Advertising</h3>
+        <%= link_to "Build Advertisement", new_vehicle_path, class: 'btn build-advert-link'%>
+      </div>
+<% else %>
+  <br />
+  <div class="row">
+    <div class="text-center col-sm-4 col-sm-offset-4">
+      <%= link_to "Show Vehicle Details", vehicle_path(current_user.vehicle.id), class: 'btn id-vehicle-link' %>
+    </div>
+  </div>
+<% end %>

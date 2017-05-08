@@ -88,26 +88,38 @@ label {
   display: block;
 }
 */
-.update-profile-link {
+
+.update-profile-link,
+.update-vehicle-link {
 	color: white;
 	background-color: #00558D;
 	font-size: 16px;
   text-decoration: none;
 }
 
-.update-profile-link:hover {
+.update-profile-link:hover:hover,
+.update-vehicle-link:hover {
 	color: white;
 	background-color: #002B47;
 }
 
 .home-link,
 .id-profile-link,
+.id-vehicle-link,
 .edit-profile-link,
+.edit-vehicle-link,
 .edit-registration-link,
 .all-profile-link,
+.all-vehicle-link,
 .new-profile-link,
+.new-vehicle-link,
 .destroy-profile-link,
-.sign-out-link {
+.destroy-vehicle-link,
+.back-to-profile-link,
+.back-to-vehicle-link,
+.sign-out-link,
+.build-vehicle-link,
+.build-advert-link {
   color: white;
   background-color: #00558D;
   font-size: 13px;
@@ -116,12 +128,20 @@ label {
 
 .home-link:hover,
 .id-profile-link:hover,
+.id-vehicle-link:hover,
 .edit-profile-link:hover,
 .edit-registration-link:hover,
 .all-profile-link:hover,
+.all-vehicle-link:hover,
 .new-profile-link:hover,
+.new-vehicle-link:hover,
+.back-to-profile-link:hover,
+.back-to-vehicle-link:hover,
 .destroy-profile-link:hover,
-.sign-out-link:hover {
+.destroy-vehicle-link:hover,
+.sign-out-link:hover,
+.build-vehicle-link:hover,
+.build-advert-link:hover {
   color: white;
 	background-color: #002B47;
 }

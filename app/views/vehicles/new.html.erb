@@ -18,12 +18,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <li><%= link_to "Hi, #{current_user.profile.first_name}", profile_path(current_user.profile.id) %></li>
-          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
-        <% end %>
         <li>
           <%= link_to "Home", root_path %>
         </li>
@@ -42,20 +36,18 @@
 <div class="row top-row">
   <div class="col-sm-4 col-sm-offset-4">
 
-    <h1>Edit Your Profile</h1>
+    <h1>Your Vehicle Details</h1>
 
   </div>
 </div>
 
-    <%= render 'form', profile: @profile %>
+    <%= render 'form', vehicle: @vehicle %>
 
 <div class="row">
   <div class="col-sm-4 col-sm-offset-4">
 
-    <%= link_to 'Show', @profile, class: 'btn id-profile-link' %>
-    <%= link_to 'All Profiles', profiles_path, class: 'btn all-profile-link' %>
-    <%= link_to "Edit Registration", edit_user_registration_path, class: 'btn edit-registration-link' %>
-    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
+    <%= link_to 'All Vehicles', vehicles_path, class: 'btn all-vehicle-link' %>
+    <%= link_to 'Back to Profile', profile_path(current_user.profile.id), class: 'btn back-to-profile-link' %>
 
   </div>
 </div>
