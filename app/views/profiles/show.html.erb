@@ -47,7 +47,7 @@
       <p id="notice"><%= notice %></p>
 
       <p>
-        <%= image_tag @profile.avatar.thumb.url %> <br />
+        <%= image_tag @profile.avatar.thumb.url unless @profile.avatar.blank? %> <br />
         <strong>Avatar</strong>
       </p>
 
