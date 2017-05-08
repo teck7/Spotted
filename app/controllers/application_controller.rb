@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
       @profile = Profile.find_by_user_id(current_user.id)
       "/profiles/#{@profile.id}"
     end
-    
+
   end
 
 end
