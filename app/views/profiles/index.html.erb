@@ -62,6 +62,7 @@
       <tbody>
         <% @profiles.each do |profile| %>
           <tr>
+            <!-- <td><%= profile.user.id %></td> -->
             <td><%= profile.user.email %></td>
             <td><%= image_tag profile.avatar.thumb.url if profile.avatar? %></td>
             <td><%= profile.first_name %></td>
