@@ -90,7 +90,8 @@ label {
 */
 
 .update-profile-link,
-.update-vehicle-link {
+.update-vehicle-link,
+.add-vehicle-image-link {
 	color: white;
 	background-color: #00558D;
 	font-size: 16px;
@@ -98,7 +99,8 @@ label {
 }
 
 .update-profile-link:hover:hover,
-.update-vehicle-link:hover {
+.update-vehicle-link:hover,
+.add-vehicle-image-link:hover, {
 	color: white;
 	background-color: #002B47;
 }
