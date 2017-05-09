@@ -40,18 +40,74 @@
 <!-- End of Navigation Section -->
 
 <div class="row top-row">
-  <div class="col-sm-4 col-sm-offset-4">
+  <div class="text-center col-sm-4 col-sm-offset-4">
 
-    <h1>Add New Vehicle Photo</h1>
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>User's First Name:</strong>
+      <%= @advert.user.profile.first_name %>
+    </p>
+
+    <p>
+      <strong>Business Name:</strong>
+      <%= @advert.business_name %>
+    </p>
+
+    <p>
+      <strong>Business Number:</strong>
+      <%= @advert.business_number %>
+    </p>
+
+    <p>
+      <strong>Advertisement Title:</strong>
+      <%= @advert.advert_title %>
+    </p>
+
+    <p>
+      <%= image_tag @advert.advert_image.url unless @advert.advert_image.blank? %> <br />
+      <strong>Advertisement Image:</strong>
+      <!--<%= @advert.advert_image %>-->
+    </p>
+
+    <p>
+      <strong>Advertisement Description:</strong>
+      <%= @advert.advert_description %>
+    </p>
+
+    <p>
+      <strong>Campaign Period:</strong>
+      <%= @advert.advert_period %>
+    </p>
+
+    <p>
+      <strong>Advertisement Location:</strong>
+      <%= @advert.advert_location %>
+    </p>
+
+    <p>
+      <strong>Vehicle Decal Position:</strong>
+      <%= @advert.advert_sticker_location %>
+    </p>
+
+    <p>
+      <strong>Payout per Mile (AUD &#36;):</strong>
+      <%= @advert.payout_per_mile %>
+    </p>
 
   </div>
 </div>
 
-  <%= render 'form', photo: @photo %>
-
 <div class="row">
-  <div class="col-sm-4 col-sm-offset-4">
-    <%= link_to 'All Vehicle Photos', photos_path, class: 'btn all-vehicle-photo-link' %>
+  <div class="text-center col-sm-4 col-sm-offset-4">
+
+    <%= link_to 'Edit Advertisement', edit_advert_path(@advert), class: 'btn edit-advert-link' %>
+    <%= link_to 'New Advertisement', new_advert_path, class: 'btn new-advert-link' %>
+    <%= link_to 'All Advertisements', adverts_path, class: 'btn all-advert-link' %>
+    <%= link_to 'Back to Profile', profile_path(current_user.profile.id), class: 'btn id-profile-link' %>
+    <br />
+    <br />
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
+
   </div>
 </div>

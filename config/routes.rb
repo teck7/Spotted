@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :adverts
   resources :photos
   resources :vehicles
   # Devise routes for User Model

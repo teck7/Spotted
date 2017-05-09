@@ -93,7 +93,7 @@
 
 <!-- For tracing <%= "@vehicle.nil? = #{@vehicle.nil?}, current_user.vehicle.nil?=#{current_user.vehicle.nil?}" %> -->
 <!-- @vehicle.nil? is equivalent to current_user.vehicle.nil? -->
-<% if user_signed_in? && @profile.save && current_user.vehicle.nil? %>
+<% if user_signed_in? && @profile.save && current_user.vehicle.nil? && current_user.adverts.nil? %>
   <div class="row">
     <div class="text-center col-sm-4 col-sm-offset-4">
       <div class="col-sm-5">
@@ -105,13 +105,20 @@
       </div>
       <div class="col-sm-5">
         <h3>Start Advertising</h3>
-        <%= link_to "Build Advertisement", new_vehicle_path, class: 'btn build-advert-link'%>
+        <%= link_to "Build Advertisement", new_advert_path, class: 'btn build-advert-link'%>
       </div>
-<% else %>
+<% elsif user_signed_in? && @profile.save && !current_user.vehicle.nil? %>
   <br />
   <div class="row">
     <div class="text-center col-sm-4 col-sm-offset-4">
       <%= link_to "Show Vehicle Details", vehicle_path(current_user.vehicle.id), class: 'btn id-vehicle-link' %>
+    </div>
+  </div>
+<% else user_signed_in? && @profile.save && !current_user.adverts.nil? %>
+  <br />
+  <div class="row">
+    <div class="text-center col-sm-4 col-sm-offset-4">
+      <%= link_to 'Show Advertisement Details', advert_path(current_user.adverts.ids), class: 'btn id-advert-link' %>
     </div>
   </div>
 <% end %>

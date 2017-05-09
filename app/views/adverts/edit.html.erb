@@ -39,50 +39,19 @@
 </nav>
 <!-- End of Navigation Section -->
 
-<p id="notice"><%= notice %></p>
-
-<div class="container-fluid top-row col-xs-12 col-sm-12 col-lg-12 col-xl-12">
-
-  <h1>All User Profiles</h1>
-
-  <div class="table-responsive">
-    <table class="table table-striped table-bordered">
-      <thead>
-        <tr>
-          <th>User</th>
-          <th>Avatar</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Mobile No.</th>
-          <th>Address</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @profiles.each do |profile| %>
-          <tr>
-            <!-- <td><%= profile.user.id %></td> -->
-            <td><%= profile.user.email %></td>
-            <td><%= image_tag profile.avatar.thumb.url if profile.avatar? %></td>
-            <td><%= profile.first_name %></td>
-            <td><%= profile.last_name %></td>
-            <td><%= profile.mob_number %></td>
-            <td><%= profile.address %></td>
-            <td><%= link_to 'Show', profile, class: 'btn id-profile-link' %></td>
-            <td><%= link_to 'Edit', edit_profile_path(profile), class: 'btn edit-profile-link' %></td>
-            <td><%= link_to 'Destroy', profile, class: 'btn destroy-profile-link', method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+<div class="row top-row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <h1>Edit Your Advertisement</h1>
   </div>
-
 </div>
 
-<hr>
+  <%= render 'form', advert: @advert %>
 
-<div class="container-fluid  col-xs-12 col-sm-12 col-lg-12 col-xl-12">
-  <%= link_to 'New Profile', new_profile_path, class: 'btn new-profile-link' %>
-  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <%= link_to 'Show', @advert, class: 'btn id-advert-link' %>
+    <%= link_to 'All Advertisements', adverts_path, class: 'btn all-advert-link' %>
+    <%= link_to "Edit Registration", edit_user_registration_path, class: 'btn edit-registration-link' %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
+</div>
 </div>

@@ -18,12 +18,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <li><%= link_to "Hi, #{current_user.profile.first_name}", profile_path(current_user.profile.id) %></li>
-          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
-        <% end %>
         <li>
           <%= link_to "Home", root_path %>
         </li>
@@ -41,17 +35,15 @@
 
 <div class="row top-row">
   <div class="col-sm-4 col-sm-offset-4">
-
-    <h1>Add New Vehicle Photo</h1>
-
+    <h1>Create New Advertisement</h1>
   </div>
 </div>
 
-  <%= render 'form', photo: @photo %>
+  <%= render 'form', advert: @advert %>
 
 <div class="row">
   <div class="col-sm-4 col-sm-offset-4">
-    <%= link_to 'All Vehicle Photos', photos_path, class: 'btn all-vehicle-photo-link' %>
+    <%= link_to 'All Advertisement', adverts_path, class: 'btn all-advert-link' %>
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
   </div>
 </div>

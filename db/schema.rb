@@ -10,10 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508111310) do
+ActiveRecord::Schema.define(version: 20170509092022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "adverts", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "business_name"
+    t.string   "business_number"
+    t.string   "advert_title"
+    t.string   "advert_image"
+    t.text     "advert_description"
+    t.integer  "advert_period"
+    t.string   "advert_location"
+    t.string   "advert_sticker_location"
+    t.integer  "payout_per_mile"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["user_id"], name: "index_adverts_on_user_id", using: :btree
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "vehicle_id"
+    t.string   "business_name"
+    t.string   "business_number"
+    t.string   "advert_title"
+    t.string   "advert_image"
+    t.text     "advert_description"
+    t.integer  "advert_period"
+    t.string   "advert_location"
+    t.string   "advert_sticker_location"
+    t.integer  "payout_per_mile"
+    t.integer  "stripe_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
+    t.index ["vehicle_id"], name: "index_bookings_on_vehicle_id", using: :btree
+  end
 
   create_table "photos", force: :cascade do |t|
     t.integer  "vehicle_id"
@@ -64,6 +99,9 @@ ActiveRecord::Schema.define(version: 20170508111310) do
     t.index ["user_id"], name: "index_vehicles_on_user_id", using: :btree
   end
 
+  add_foreign_key "adverts", "users"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "vehicles"
   add_foreign_key "photos", "vehicles"
   add_foreign_key "profiles", "users"
   add_foreign_key "vehicles", "users"

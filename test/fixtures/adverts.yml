@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  business_name: MyString
+  business_number: MyString
+  advert_title: MyString
+  advert_image: MyString
+  advert_description: MyText
+  advert_period: 1
+  advert_location: MyString
+  advert_sticker_location: MyString
+  payout_per_mile: 1
+
+two:
+  user: two
+  business_name: MyString
+  business_number: MyString
+  advert_title: MyString
+  advert_image: MyString
+  advert_description: MyText
+  advert_period: 1
+  advert_location: MyString
+  advert_sticker_location: MyString
+  payout_per_mile: 1

@@ -39,9 +39,11 @@
 </nav>
 <!-- End of Navigation Section -->
 
+<p id="notice"><%= notice %></p>
+
 <div class="container-fluid top-row col-xs-12 col-sm-12 col-lg-12 col-xl-12">
 
-<h1>Photos</h1>
+<h1>All Vehicle Photos</h1>
 
 <div class="table-responsive">
   <table class="table table-striped table-bordered">
@@ -58,9 +60,9 @@
       <tr>
         <td><%= current_user.profile.first_name %></td>
         <td><%= image_tag photo.image.url unless photo.image.blank? %></td>
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', photo, class: 'btn id-photo-link' %></td>
+        <td><%= link_to 'Edit', edit_photo_path(photo), class: 'btn edit-photo-link' %></td>
+        <td><%= link_to 'Destroy', photo, class: 'btn destroy-photo-link', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

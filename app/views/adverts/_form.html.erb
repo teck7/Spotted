@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+
+    <%= form_for(advert) do |f| %>
+      <% if advert.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(advert.errors.count, "error") %> prohibited this advert from being saved:</h2>
+
+          <ul>
+          <% advert.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <!-- <div class="field">
+        <%= f.label :user_id %>
+      </div> -->
+
+      <%= f.hidden_field :user_id %>
+
+      <div class="form-group">
+        <%= f.label :business_name %>
+        <%= f.text_field :business_name, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :business_number %>
+        <%= f.text_field :business_number, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :advert_title %>
+        <%= f.text_field :advert_title, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :advert_image %>
+        <%= f.file_field :advert_image %>
+        <% if f.object.advert_image? %>
+          <%= image_tag f.object.advert_image.url %> <br />
+          <%= f.label :remove_adimg %>
+          <%= f.check_box :remove_adimg %>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :advert_description %>
+        <%= f.text_area :advert_description, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :advert_period %>
+        <%= f.number_field :advert_period, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :advert_location %>
+        <%= f.text_field :advert_location, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :advert_sticker_location %>
+        <%= f.text_field :advert_sticker_location, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :payout_per_mile %>
+        <%= f.number_field :payout_per_mile, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit nil, :class => 'btn add-advert-link' %>
+      </div>
+    <% end %>
+
+    <hr>
+  </div>
+</div>
