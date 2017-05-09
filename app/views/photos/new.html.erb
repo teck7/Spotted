@@ -1,5 +1,16 @@
-<h1>New Photo</h1>
+<div class="row top-row">
+  <div class="col-sm-4 col-sm-offset-4">
 
-<%= render 'form', photo: @photo %>
+    <h1>Add New Photo</h1>
 
-<%= link_to 'Back', photos_path %>
+  </div>
+</div>
+
+  <%= render 'form', photo: @photo %>
+
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <%= link_to 'All Vehicle Photos', photos_path, class: 'btn all-vehicle-photo-link' %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
+  </div>
+</div>

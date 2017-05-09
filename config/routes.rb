@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   resources :photos
   resources :vehicles
   # Devise routes for User Model

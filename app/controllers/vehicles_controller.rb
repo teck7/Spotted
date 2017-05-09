@@ -10,6 +10,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles/1
   # GET /vehicles/1.json
   def show
+    @photos = Photo.all
   end
 
   # GET /vehicles/new

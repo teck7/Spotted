@@ -74,15 +74,25 @@
       <%= @vehicle.car_rego %>
     </p>
 
+    <% @photos.each do |img| %>
+
+      <% if img.vehicle_id == @vehicle.id %>
+        <%= image_tag img.image_url, size: "360x250" if img.image %><br />
+        <br />
+        <%= link_to 'Edit', edit_photo_path(img), class: 'btn edit-photo-link' %></p>
+      <% end %>
+
+    <% end %>
+
     <hr>
   </div>
 </div>
 
-<% if !current_user.vehicle.nil? %>
+<% if !current_user.vehicle.nil? && !current_user.vehicle.try(photo_url).blank? %>
   <div class="row">
     <div class="text-center col-sm-4 col-sm-offset-4">
-        <h3>Please add your vehicle images!</h3>
-        <%= link_to "Add Vehicle Photos", new_photo_path, class: 'btn add-vehicle-image-link' %>
+      <h3>Please add your vehicle images!</h3>
+      <%= link_to "Add Vehicle Photos", new_photo_path(vehicle: @vehicle.id), class: 'btn add-vehicle-image-link' %>
     </div>
   </div>
 <% end %>
