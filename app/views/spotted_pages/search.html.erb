@@ -1,1 +1,11 @@
-<h1>Search for Drivers to advertise </h1>
+<div class="row top-row">
+  <div class="text-center col-sm-10 col-sm-offset-1">
+
+    <h1>Search for Drivers to Advertise for You</h1>
+
+    <%= render 'vehicles/vehicle', vehicles: @vehicles %>
+
+    <%= link_to "Profile", profile_path(current_user.profile.id), class: 'btn btn-lg id-profile-link' %>
+
+  </div>
+</div>

@@ -1,4 +1,5 @@
 class SpottedPagesController < ApplicationController
+
   def home
   end
 
@@ -6,5 +7,7 @@ class SpottedPagesController < ApplicationController
   end
 
   def search
+    @vehicles = Vehicle.all
   end
+
 end
