@@ -21,52 +21,52 @@
       <%= f.hidden_field :user_id %>
 
       <div class="form-group">
-        <%= f.label :business_name %>
+        <%= f.label :business_name, 'Business Name' %>
         <%= f.text_field :business_name, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :business_number %>
+        <%= f.label :business_number, 'Business Number' %>
         <%= f.text_field :business_number, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :advert_title %>
+        <%= f.label :advert_title, 'Advertisement Title' %>
         <%= f.text_field :advert_title, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :advert_image %>
+        <%= f.label :advert_image, 'Advertisement Image' %>
         <%= f.file_field :advert_image %>
         <% if f.object.advert_image? %>
           <%= image_tag f.object.advert_image.url %> <br />
-          <%= f.label :remove_adimg %>
-          <%= f.check_box :remove_adimg %>
+          <%= f.label :remove_advert_image %>
+          <%= f.check_box :remove_advert_image %>
         <% end %>
       </div>
 
       <div class="form-group">
-        <%= f.label :advert_description %>
+        <%= f.label :advert_description, 'Advertisement Description'%>
         <%= f.text_area :advert_description, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :advert_period %>
+        <%= f.label :advert_period, 'Advertisement Period' %>
         <%= f.number_field :advert_period, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :advert_location %>
+        <%= f.label :advert_location, 'Advertisement Location' %>
         <%= f.text_field :advert_location, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :advert_sticker_location %>
+        <%= f.label :advert_sticker_location, 'Vehicle Sticker Location' %>
         <%= f.text_field :advert_sticker_location, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :payout_per_mile %>
+        <%= f.label :payout_per_mile, 'Pay per Mile ($AUD)' %>
         <%= f.number_field :payout_per_mile, class: 'form-control' %>
       </div>
 

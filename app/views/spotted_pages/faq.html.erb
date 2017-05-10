@@ -24,6 +24,9 @@
           <% else %>
             <li><%= link_to "Sign In", new_user_session_path %></li>
           <% end %>
+          <% if user_signed_in? && current_user.profile.save && current_user.adverts.ids.present? %>
+            <li><%= link_to "Search for Drivers", search_path %></li>
+          <% end %>
           <li>
             <%= link_to "Home", root_path %>
           </li>

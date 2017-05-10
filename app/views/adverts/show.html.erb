@@ -42,6 +42,8 @@
 <div class="row top-row">
   <div class="text-center col-sm-4 col-sm-offset-4">
 
+    <h1>Your Latest Advertisement Entry</h1>
+
     <p id="notice"><%= notice %></p>
 
     <p>
@@ -76,7 +78,7 @@
     </p>
 
     <p>
-      <strong>Campaign Period:</strong>
+      <strong>Campaign Period (Month):</strong>
       <%= @advert.advert_period %>
     </p>
 
@@ -91,7 +93,7 @@
     </p>
 
     <p>
-      <strong>Payout per Mile (AUD &#36;):</strong>
+      <strong>Payout per Mile (&#36;AUD):</strong>
       <%= @advert.payout_per_mile %>
     </p>
 
@@ -111,3 +113,9 @@
 
   </div>
 </div>
+
+<br />
+<br />
+
+<h1 class="text-center">Your Record of Advertisement Entries</h1>
+<%= render 'adverts/advert', obj: current_user.adverts %>

@@ -4,4 +4,7 @@ class SpottedPagesController < ApplicationController
 
   def faq
   end
+
+  def search
+  end
 end
