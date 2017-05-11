@@ -1,0 +1,105 @@
+class OrdersController < ApplicationController
+  before_action :set_order, only: [:show, :edit, :update, :destroy]
+
+  # GET /orders
+  # GET /orders.json
+  def index
+    @orders = Order.all
+  end
+
+  # GET /orders/1
+  # GET /orders/1.json
+  def show
+  end
+
+  # GET /orders/new
+  def new
+    @order = Order.new
+
+    @vehicle = Vehicle.find(params[:vehicle_id])
+    @advert = Advert.find(params[:advert_id])
+    @order.vehicle = @vehicle
+  #  @user = User.find(current_user)
+  #  @order.user = @user  @advert = Advert.find(2)
+    @amount = @advert.pay_amount
+
+
+  end
+
+  # GET /orders/1/edit
+  def edit
+  end
+
+  # POST /orders
+  # POST /orders.json
+  def create
+    @order = Order.new(order_params)
+    @order.user = current_user
+    @order.vehicle = vehicle
+
+
+  customer = Stripe::Customer.create(
+    :email => params[:stripeEmail],
+    :source  => params[:stripeToken]
+  )
+
+  charge = Stripe::Charge.create(
+    :customer    => customer.id,
+    :amount      => @amount,
+    :description => @advert.business_name,
+    :currency    => 'aud'
+  )
+
+  @order.stripe_charge_id = charge.id
+
+    respond_to do |format|
+      if @order.save
+        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        format.json { render :show, status: :created, location: @order }
+      else
+        format.html { render :new }
+        format.json { render json: @order.errors, status: :unprocessable_entity }
+      end
+    end
+
+  rescue Stripe::CardError => e
+    flash[:error] = e.message
+    redirect_to new_order_path(vehicle: @vehicle.id, user: @user.id)
+
+  end
+
+  # PATCH/PUT /orders/1
+  # PATCH/PUT /orders/1.json
+  def update
+    respond_to do |format|
+      if @order.update(order_params)
+        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
+        format.json { render :show, status: :ok, location: @order }
+      else
+        format.html { render :edit }
+        format.json { render json: @order.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /orders/1
+  # DELETE /orders/1.json
+  def destroy
+    @order.destroy
+    respond_to do |format|
+      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_order
+      @order = Order.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def order_params
+      params.require(:order).permit(:user_id, :vehicle_id, :stripe_charge_id)
+    end
+end

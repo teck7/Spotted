@@ -110,7 +110,7 @@
     <br />
     <br />
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
-
+    <td><%= link_to "Book", vehicles_path(advert_id: @advert.id) %></td>
   </div>
 </div>
 

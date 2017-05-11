@@ -50,6 +50,11 @@ gem 'rmagick'
 # Mini MiniMagick
 gem 'mini_magick', '~> 4.3'
 
+# Stripe for payment
+gem 'stripe'
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

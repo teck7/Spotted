@@ -3,7 +3,11 @@ class Vehicle < ApplicationRecord
   has_many :photos, dependent: :destroy
 
   def self.search(search)
-    where("car_make ILIKE ? OR car_model ILIKE ? OR car_built ILIKE ? OR car_color ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+    where("UPPER (car_make) ILIKE ? OR UPPER (car_model) ILIKE ? OR UPPER (car_color) ILIKE ?", "%#{search.upcase}%", "%#{search.upcase}%", "%#{search.upcase}%")
+  end
+
+  def price_in_cents
+    (payout_per_mile * 100).to_i
   end
 
 end

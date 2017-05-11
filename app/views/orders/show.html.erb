@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<!--<p>
+  <strong>User:</strong>
+  <%= @order.user %>
+</p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @order.vehicle %>
+</p>
+
+<p>
+  <strong>Stripe charge:</strong>
+  <%= @order.stripe_charge_id %>
+</p>-->
+
+<h2>Thanks, you paid <strong>$5.00</strong>!</h2>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

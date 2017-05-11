@@ -27,9 +27,10 @@
         <td><%= vehicle.car_built %></td>
         <td><%= vehicle.car_color %></td>
         <td><%= vehicle.car_rego %></td>
-        <td><%= link_to 'Show', vehicle, class: 'btn id-vehicle-link' %></td>
+        <!--<td><%= link_to 'Show', vehicle, class: 'btn id-vehicle-link' %></td>
         <td><%= link_to 'Edit', edit_vehicle_path(vehicle), class: 'btn edit-vehicle-link' %></td>
-        <td><%= link_to 'Destroy', vehicle, class: 'btn destroy-vehicle-link', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', vehicle, class: 'btn destroy-vehicle-link', method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        <td><%= link_to 'Select', orders_path(vehicle.id, advert_id: @advert), class: 'btn id-vehicle-link' %></td>
       </tr>
     <% end %>
   </tbody>
