@@ -24,6 +24,9 @@
         <% else %>
           <li><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>
+        <% if user_signed_in? && current_user.profile.save && current_user.adverts.ids.present? %>
+          <li><%= link_to "Search for Drivers", search_path %></li>
+        <% end %>
         <li>
           <%= link_to "Home", root_path %>
         </li>
@@ -111,14 +114,14 @@
   <br />
   <div class="row">
     <div class="text-center col-sm-4 col-sm-offset-4">
-      <%= link_to "Show Vehicle Details", vehicle_path(current_user.vehicle.id), class: 'btn id-vehicle-link' %>
+      <%= link_to "Show Personal Vehicle Details", vehicle_path(current_user.vehicle.id), class: 'btn id-vehicle-link' %>
     </div>
   </div>
 <% else user_signed_in? && @profile.save && current_user.adverts.ids.present? %>
   <br />
   <div class="row">
     <div class="text-center col-sm-4 col-sm-offset-4">
-      <%= link_to 'Show Advertisement Details', advert_path(current_user.adverts.ids), class: 'btn id-advert-link' %>
+      <%= link_to 'Show Personal Advertisement Details', advert_path(current_user.adverts.ids), class: 'btn id-advert-link' %>
     </div>
   </div>
 <% end %>

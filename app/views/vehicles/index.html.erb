@@ -63,7 +63,7 @@
   <tbody>
     <% @vehicles.each do |vehicle| %>
       <tr>
-        <td><%= current_user.profile.first_name %></td>
+        <td><%= vehicle.user.profile.first_name %></td>
 
         <% vehicle.photos.each do |img| %>
           <% if img.vehicle_id == vehicle.id %>

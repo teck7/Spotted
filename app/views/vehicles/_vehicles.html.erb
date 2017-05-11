@@ -17,11 +17,6 @@
     <% vehicles.each do |vehicle| %>
       <tr>
         <td><%= current_user.profile.first_name %></td>
-        <% vehicle.photos.each do |img| %>
-          <% if img.vehicle_id == vehicle.id %>
-            <td><%= image_tag img.image_url, size: "200x150" if img.image %></td>
-          <% end %>
-        <% end %>
         <td><%= vehicle.car_make %></td>
         <td><%= vehicle.car_model %></td>
         <td><%= vehicle.car_built %></td>
