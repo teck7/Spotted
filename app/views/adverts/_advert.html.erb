@@ -2,7 +2,7 @@
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th>User First Name</th>
+        <!--<th>User First Name</th>-->
         <th>Business Name</th>
         <th>Business Number</th>
         <th>Advert Title</th>
@@ -12,26 +12,25 @@
         <th>Advert Location</th>
         <th>Vehicle Sticker Location</th>
         <th>Payout per Mile (AUD &#36;)</th>
-        <th colspan="3"></th>
       </tr>
     </thead>
 
     <tbody>
       <% obj.each do |advert| %>
         <tr>
-          <td><%= advert.user.profile.first_name %></td>
+          <!--<td><%= advert.user.profile.first_name %></td>-->
           <td><%= advert.business_name %></td>
           <td><%= advert.business_number %></td>
           <td><%= advert.advert_title %></td>
-          <td><%= image_tag advert.advert_image.url unless advert.advert_image.blank? %></td>
+          <td><%= image_tag advert.advert_image.url, class: 'center-block img-responsive' unless advert.advert_image.blank? %></td>
           <td><%= advert.advert_description %></td>
           <td><%= advert.advert_period %></td>
           <td><%= advert.advert_location %></td>
           <td><%= advert.advert_sticker_location %></td>
           <td><%= advert.payout_per_mile %></td>
-          <td><%= link_to 'Show', advert, class: 'btn id-advert-link' %></td>
+          <!--<td><%= link_to 'Show', advert, class: 'btn id-advert-link' %></td>
           <td><%= link_to 'Edit', edit_advert_path(advert), class: 'btn edit-advert-link' %></td>
-          <td><%= link_to 'Destroy', advert, class: 'btn destroy-advert-link', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Destroy', advert, class: 'btn destroy-advert-link', method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
         </tr>
       <% end %>
     </tbody>

@@ -77,7 +77,7 @@
     <% @photos.each do |img| %>
 
       <% if img.vehicle_id == @vehicle.id %>
-        <%= image_tag img.image_url, size: "360x250" if img.image %><br />
+        <%= image_tag img.image_url, class: 'center-block img-responsive', size: "360x250" if img.image %><br />
         <br />
         <%= link_to 'Edit Vehicle Photo', edit_photo_path(img), class: 'btn edit-photo-link' %></p>
       <% end %>
@@ -110,7 +110,7 @@
   <div class="text-center col-sm-4 col-sm-offset-4">
 
     <%= link_to 'Edit Vehicle', edit_vehicle_path(@vehicle), class: 'btn edit-vehicle-link' %>
-    <%= link_to 'All Vehicles', vehicles_path, class: 'btn all-vehicle-link' %>
+    <!--<%= link_to 'All Vehicles', vehicles_path, class: 'btn all-vehicle-link' %>-->
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
 
   </div>

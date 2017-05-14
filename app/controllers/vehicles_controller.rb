@@ -6,12 +6,14 @@ class VehiclesController < ApplicationController
   def index
     @vehicles = Vehicle.all
 
+    # For Vehicle Search Function
     if params[:search]
       @vehicles = Vehicle.search(params[:search]).order("created_at DESC")
     else
       @vehicles = Vehicle.all.order("created_at DESC")
     end
 
+    # Allow Advert id to pass on in this model
     @advert = Advert.find(params[:advert_id])
 
   end

@@ -91,7 +91,8 @@ label {
 
 .update-profile-link,
 .update-vehicle-link,
-.add-vehicle-image-link {
+.add-vehicle-image-link,
+.book-vehicle-link {
 	color: white;
 	background-color: #00558D;
 	font-size: 16px;
@@ -100,7 +101,8 @@ label {
 
 .update-profile-link:hover:hover,
 .update-vehicle-link:hover,
-.add-vehicle-image-link:hover, {
+.add-vehicle-image-link:hover,
+.book-vehicle-link:hover {
 	color: white;
 	background-color: #002B47;
 }
@@ -133,7 +135,8 @@ label {
 .back-to-vehicle-link,
 .sign-out-link,
 .build-vehicle-link,
-.build-advert-link {
+.build-advert-link,
+.order-link {
   color: white;
   background-color: #00558D;
   font-size: 13px;
@@ -168,7 +171,8 @@ label {
 .destroy-advert-link:hover,
 .sign-out-link:hover,
 .build-vehicle-link:hover,
-.build-advert-link:hover {
+.build-advert-link:hover,
+.order-link:hover {
   color: white;
 	background-color: #002B47;
 }

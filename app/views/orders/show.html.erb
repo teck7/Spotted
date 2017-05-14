@@ -15,7 +15,7 @@
   <%= @order.stripe_charge_id %>
 </p>-->
 
-<h2>Thanks, you paid <strong>$5.00</strong>!</h2>
+<h2>Thanks, you paid <strong><%= @amount %></strong>!</h2>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to 'Edit', edit_order_path(@order), class: 'btn order-link' %>
+<%= link_to 'Back', orders_path, class: 'btn order-link' %>

@@ -53,6 +53,7 @@ gem 'mini_magick', '~> 4.3'
 # Stripe for payment
 gem 'stripe'
 
+# Stripe for payment (supplementary)
 gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do

@@ -64,7 +64,7 @@
           <tr>
             <!-- <td><%= profile.user.id %></td> -->
             <td><%= profile.user.email %></td>
-            <td><%= image_tag profile.avatar.thumb.url if profile.avatar? %></td>
+            <td><%= image_tag profile.avatar.thumb.url, class: 'center-block img-responsive' if profile.avatar? %></td>
             <td><%= profile.first_name %></td>
             <td><%= profile.last_name %></td>
             <td><%= profile.mob_number %></td>

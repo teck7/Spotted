@@ -67,7 +67,7 @@
     </p>
 
     <p>
-      <%= image_tag @advert.advert_image.url unless @advert.advert_image.blank? %> <br />
+      <%= image_tag @advert.advert_image.url, class: 'center-block img-responsive' unless @advert.advert_image.blank? %> <br />
       <strong>Advertisement Image:</strong>
       <!--<%= @advert.advert_image %>-->
     </p>
@@ -105,12 +105,14 @@
 
     <%= link_to 'Edit Advertisement', edit_advert_path(@advert), class: 'btn edit-advert-link' %>
     <%= link_to 'New Advertisement', new_advert_path, class: 'btn new-advert-link' %>
-    <%= link_to 'All Advertisements', adverts_path, class: 'btn all-advert-link' %>
+    <!-- <%= link_to 'All Advertisements', adverts_path, class: 'btn all-advert-link' %> -->
     <%= link_to 'Back to Profile', profile_path(current_user.profile.id), class: 'btn id-profile-link' %>
     <br />
     <br />
-    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>
-    <td><%= link_to "Book", vehicles_path(advert_id: @advert.id) %></td>
+    <!--<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn sign-out-link' %>-->
+    <!-- Allow user as Advertiser to navigate to a list of registered vehicle -->
+    <!-- Pass the advert_id into all vregistered vehicle show page -->
+    <td><%= link_to "Book Vehicle", vehicles_path(advert_id: @advert.id), class: 'btn book-vehicle-link' %></td>
   </div>
 </div>
 

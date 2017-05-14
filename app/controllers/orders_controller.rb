@@ -15,14 +15,12 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
-
     @vehicle = Vehicle.find(params[:vehicle_id])
     @advert = Advert.find(params[:advert_id])
     @order.vehicle = @vehicle
   #  @user = User.find(current_user)
   #  @order.user = @user  @advert = Advert.find(2)
     @amount = @advert.pay_amount
-
 
   end
 
@@ -33,20 +31,20 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(order_params)
-    @order.user = current_user
-    @order.vehicle = vehicle
+    @order = Order.new()
+    #@order.user = current_user
 
 
   customer = Stripe::Customer.create(
     :email => params[:stripeEmail],
-    :source  => params[:stripeToken]
+    :source  => params[:stripeToken],
+    :amount => params[:stripeAmount]
   )
 
   charge = Stripe::Charge.create(
     :customer    => customer.id,
-    :amount      => @amount,
-    :description => @advert.business_name,
+    :amount      => @advert.pay_amount,
+    :description => 'Rails Stripe customer',
     :currency    => 'aud'
   )
 

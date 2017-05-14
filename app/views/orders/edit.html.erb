@@ -1,6 +1,6 @@
-<h1>Editing Order</h1>
+<h1>Edit Your Vehicle Order</h1>
 
 <%= render 'form', order: @order %>
 
-<%= link_to 'Show', @order %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to 'Show', @order, class: 'btn order-link' %> 
+<%= link_to 'Back', orders_path, class: 'btn order-link' %>
