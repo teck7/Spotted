@@ -133,3 +133,6 @@ So far, the application would still need to have several more features, developm
 
 ### Summary
 In summary, this application is still in MAP (Most Anticipating Product) phase and more works needs to done to achieve MVP. It is realised that good planning at the start had helped to achieve better application building process although not all specifications of the project are met.
+
+### Heroku App Link
+https://spotttted.herokuapp.com/
