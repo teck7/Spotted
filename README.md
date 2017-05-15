@@ -3,7 +3,7 @@
 
 **Figure 1**: Simplified 2 Sided Market Concept
 
-This is a 2 sided marketplace project using HTML5 / CSS3 / Ruby 2.4 and Rails 5.0.2 framework. Other tools such as Ubuntu Environment / Github / DB Designer / Adobe Illustrator and AutoCad.
+This is a 2 sided marketplace project using HTML5 / CSS3 / Ruby 2.4 and Rails 5.0.2 framework. Other tools such as Ubuntu Environment / Github / Trello Board / DB Designer / Adobe Illustrator and AutoCad.
 
 ## Project Design Documentation Contents
 1. [Research and Investigation](#research-and-investigation)
@@ -123,7 +123,7 @@ In the advertisement show page of each advertiser, a link to order vehicle is pr
 In this application, assumptions are made for calculating the payable amount. A month of campaign duration is equivalent to 30 days and a driver is expected to drive a maximum of 5 miles each day. At this stage of the application, the advertiser is only allowed to make a vehicle order instead of multiple orders. Thus, a pay_amount method is declared in the Advert model (i.e. advert.rb file). This allows Stripe transaction to capture the @ amount payable from the Advertiser towards the application service provider. The payment would then be made to the drivers on weekly / fortnightly / monthly basis provided that the driver had met the advertiser campaign requirement. The Stripe transaction is not possible without installing the Stripe gem and creating a private environment for the API keys.
 
 So far, the application would still need to have several more features, development testing and CSS styling before it can reach a minimum viable product. The features that would be added in the coming future are as followed;
-*  Multi-image upload for vehicle
+* Multi-image upload for vehicle
 * Search function for advertiser to search available vehicle
 * Multi-vehicle order
 * Order status of the vehicle
