@@ -12,8 +12,11 @@ This is a 2 sided marketplace project using HTML5 / CSS3 / Ruby 2.4 and Rails 5.
 4. [Entity Relationship Diagram](#entity-relationship-diagram)
 5. [Application Workflow Diagram](#application-workflow-diagram)
 6. [Wireframes Design](#wireframes-design)
-6.1. [Desktop and Mobile Screen Static Pages](#desktop-and-mobile-screen-static-pages)
-6.2. [Desktop and Mobile Screen Web Application Pages](#desktop-and-mobile-screen-web-application-pages)
+
+    6.1. [Desktop and Mobile Screen Static Pages](#desktop-and-mobile-screen-static-pages)
+
+    6.2. [Desktop and Mobile Screen Web Application Pages](#desktop-and-mobile-screen-web-application-pages)
+
 7. [Ruby on Rails Implementation](#ruby-on-rails-implementation)
 8. [Summary](#summary)
 
